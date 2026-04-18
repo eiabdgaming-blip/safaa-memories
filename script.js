@@ -7,11 +7,17 @@ const musicFolder = "music/";
 // هنا بتجيب كل الملفات الموجودة في المجلد
 const songs = [
   "اختاري يلا مستنيه ايه ؟",
-  "Ballad to a Mexican Desert.mp3",
+  "billie jean.mp3",
+
   "Golden Brown (Slowed Down Version).mp3",
-  "Eminem - Mockingbird.mp3",
-  "men 9al en tla9e.mp3",
-  "music5.mp3"
+  "love me not.mp3",
+  "let the world burn.mp3",
+  "Under the infulence.mp3",
+  "set fire to the rain.mp3",
+  "till the sun rise.mp3",
+  "smackthat.mp3",
+  "what it is.mp3",
+  "My Marmalade.mp3"
 ];
 
 // إنشاء الخيارات تلقائيًا
