@@ -421,15 +421,34 @@ header {
   transform-origin: left center;
 }
 
+/* ======= التعديلات هنا في كتاب الذكريات ======= */
 .page-content {
   padding: 30px;
   height: 100%;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
   color: #333;
   position: relative;
+  overflow-y: auto;
+  overflow-x: hidden;
+  word-wrap: break-word;
+  text-align: center;
+}
+
+/* شريط التمرير الجميل داخل الصفحة */
+.page-content::-webkit-scrollbar {
+  width: 4px;
+}
+
+.page-content::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.page-content::-webkit-scrollbar-thumb {
+  background: rgba(139, 0, 0, 0.3);
+  border-radius: 2px;
 }
 
 .page h3 {
@@ -437,17 +456,21 @@ header {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
-  font-size: 24px;
-  margin-bottom: 20px;
+  font-size: 22px;
+  margin-bottom: 15px;
   font-family: 'Georgia', serif;
+  line-height: 1.3;
+  flex-shrink: 0;
+  width: 100%;
 }
 
 .page p {
-  font-size: 16px;
-  line-height: 1.8;
+  font-size: 15px;
+  line-height: 1.7;
   color: #555;
   text-align: center;
   font-style: italic;
+  width: 100%;
 }
 
 .page-decoration {
@@ -1208,25 +1231,41 @@ header {
     font-size: 22px;
   }
 
-  /* Mobile Book Adjustments */
+  /* Mobile Book Adjustments - متعدل هنا */
   .book {
-    height: 350px;
+    height: 380px;
   }
 
   .page-content {
-    padding: 20px;
+    padding: 15px;
+    justify-content: flex-start;
   }
 
   .page h3 {
-    font-size: 20px;
+    font-size: 17px;
+    margin-bottom: 10px;
   }
 
   .page p {
-    font-size: 14px;
+    font-size: 13.5px;
+    line-height: 1.6;
+  }
+
+  .page-number {
+    font-size: 10px;
+    top: 8px;
+  }
+
+  .left-page .page-number,
+  .right-page .page-number {
+    left: auto;
+    right: auto;
+    top: 8px;
   }
 
   .book-controls {
     gap: 20px;
+    margin-top: 20px;
   }
 
   .nav-btn {
@@ -1276,15 +1315,24 @@ header {
   }
 
   .book {
-    height: 300px;
+    height: 350px;
+  }
+
+  .page-content {
+    padding: 12px;
   }
 
   .page h3 {
-    font-size: 18px;
+    font-size: 16px;
   }
 
   .page p {
-    font-size: 13px;
+    font-size: 12.5px;
+    line-height: 1.5;
+  }
+  
+  .page-decoration {
+    display: none;
   }
 }
 
